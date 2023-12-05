@@ -84,11 +84,11 @@
 
 /// The maximum linear position correction used when solving constraints. This helps to
 /// prevent overshoot. Meters.
-#define b2_maxLinearCorrection		(0.2f * b2_lengthUnitsPerMeter)
+#define b2_maxLinearCorrection		(100.0f * b2_lengthUnitsPerMeter)
 
 /// The maximum angular position correction used when solving constraints. This helps to
 /// prevent overshoot.
-#define b2_maxAngularCorrection		(8.0f / 180.0f * b2_pi)
+#define b2_maxAngularCorrection		(100.0f / 180.0f * b2_pi)
 
 /// The maximum linear translation of a body per step. This limit is very large and is used
 /// to prevent numerical problems. You shouldn't need to adjust this. Meters.
@@ -97,7 +97,7 @@
 
 /// The maximum angular velocity of a body. This limit is very large and is used
 /// to prevent numerical problems. You shouldn't need to adjust this.
-#define b2_maxRotation				(0.5f * b2_pi)
+#define b2_maxRotation				(100.0f * b2_pi)
 #define b2_maxRotationSquared		(b2_maxRotation * b2_maxRotation)
 
 /// This scale factor controls how fast overlap is resolved. Ideally this would be 1 so
